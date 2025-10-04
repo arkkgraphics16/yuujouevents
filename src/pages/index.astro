@@ -16,19 +16,20 @@ import Footer from '../components/Footer.astro';
 </head>
 
 <main class="relative flex min-h-[100dvh] flex-col overflow-hidden">
-  <section class="relative isolate overflow-hidden px-6 pb-20 pt-28">
+  <section class="relative isolate overflow-hidden px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28">
     <div class="absolute inset-0 -z-10">
-      <div class="absolute left-1/4 top-10 h-56 w-56 rounded-full bg-sky-500/20 blur-3xl"></div>
-      <div class="absolute right-10 top-32 h-80 w-80 rounded-full bg-emerald-500/10 blur-3xl"></div>
+      <div class="absolute left-1/4 top-10 h-56 w-56 rounded-full bg-red-500/20 blur-3xl"></div>
+      <div class="absolute right-10 top-32 h-80 w-80 rounded-full bg-rose-900/20 blur-3xl"></div>
       <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/60 to-transparent"></div>
     </div>
-    <div class="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 sm:gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
       <div class="space-y-6">
         <Title />
         <p class="max-w-xl text-base text-slate-200/80 sm:text-lg">
-          Welcome to the Yuujou Events hub — your home for uplifting meetups, fandom collaborations, and community
-          spotlights. Browse upcoming gatherings, discover how to participate, and read the guidelines that keep our
-          spaces caring and creative.
+          Yuujou Events is a community-driven hub in Aklan dedicated to uniting fans through cosplay, creative
+          expression, and shared passions. We host uplifting gatherings, fandom collaborations, and community
+          spotlights where friendships can flourish. Discover upcoming meetups, learn how to get involved, and join a
+          space that celebrates kindness, artistry, and connection.
         </p>
         <div class="flex flex-wrap gap-3 text-sm font-medium text-slate-100">
           <a
@@ -60,7 +61,7 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <section id="events" class="relative isolate bg-black/30 px-6 py-20">
+  <section id="events" class="relative isolate bg-black/30 px-4 py-16 sm:px-6 sm:py-20">
     <div class="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-slate-600/40 to-transparent"></div>
     <div class="mx-auto flex max-w-6xl flex-col gap-12">
       <div class="max-w-3xl">
@@ -71,7 +72,26 @@ import Footer from '../components/Footer.astro';
         </p>
       </div>
       <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {['Friendship Festival', 'Creators Workshop', 'Night Market Meetup'].map((event, index) => (
+        {[
+          {
+            title: 'Friendship Festival',
+            description:
+              'Join Yuujou Events in celebrating cosplay, fandoms, and the bonds that bring us together. The Friendship Festival is designed for heartfelt meetups, group activities, and shared creative moments. Final schedules and galleries are coming soon—stay tuned for updates.',
+            footer: 'Friendship takes center stage — gallery coming soon'
+          },
+          {
+            title: 'Creators Workshop',
+            description:
+              'A space for cosplayers, artists, and storytellers to collaborate and learn from each other. The Creators Workshop highlights skill-building, resource sharing, and uplifting local talent. Placeholder imagery will be updated once our gallery is finalized.',
+            footer: 'Creative skills in focus — gallery pending'
+          },
+          {
+            title: 'Night Market Meetup',
+            description:
+              'An evening gathering filled with cosplay, creativity, and community fun. The Night Market Meetup welcomes fans to showcase outfits, trade stories, and connect in a casual setting. Event details and photos will be revealed soon—sign up to our newsletter for early announcements.',
+            footer: 'Nighttime vibes — final shots arriving soon'
+          }
+        ].map((event, index) => (
           <article class="flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70">
             <div class="relative aspect-[4/3] w-full bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950">
               <div class="absolute inset-0 grid place-items-center">
@@ -81,13 +101,10 @@ import Footer from '../components/Footer.astro';
               </div>
             </div>
             <div class="flex flex-1 flex-col gap-3 p-6">
-              <h3 class="text-lg font-semibold text-white">{event}</h3>
-              <p class="text-sm text-slate-200/80">
-                Event details, schedules, and photos are being finalised. Check back soon or join our newsletter for
-                early updates.
-              </p>
+              <h3 class="text-lg font-semibold text-white">{event.title}</h3>
+              <p class="text-sm text-slate-200/80">{event.description}</p>
               <div class="mt-auto text-xs font-medium uppercase tracking-[0.3em] text-slate-400">
-                Placeholder imagery — final gallery pending
+                {event.footer}
               </div>
             </div>
           </article>
@@ -96,18 +113,20 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <section id="guidelines" class="px-6 py-24">
+  <section id="guidelines" class="px-4 py-20 sm:px-6 sm:py-24">
     <div class="mx-auto max-w-5xl">
       <Rules />
     </div>
   </section>
 
-  <section class="px-6 pb-24">
+  <section class="px-4 pb-20 sm:px-6 sm:pb-24">
     <div class="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-slate-900/70 p-10 text-center shadow-xl">
       <h2 class="text-2xl font-semibold text-white sm:text-3xl">Need a placeholder asset?</h2>
       <p class="mt-4 text-sm text-slate-200/80">
-        Download the official Yuujou Events placeholder pack for flyers, slides, and schedule posts. Replace it with
-        your own visuals once you have the all-clear from the participants featured.
+        Yuujou Events is built around celebrating the creativity of our community. While we gather final photos and
+        artworks, you can download our official placeholder pack for use in flyers, slides, or event posts. Once
+        permissions and approvals are cleared, replace them with authentic visuals that highlight the heart of cosplay
+        and fan collaboration.
       </p>
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-slate-100">
         <a
