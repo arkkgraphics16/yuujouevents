@@ -25,36 +25,36 @@ import Footer from '../components/Footer.astro';
     <div class="mx-auto grid max-w-6xl items-center gap-10 sm:gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
       <div class="space-y-6">
         <Title />
-        <p class="max-w-xl text-base text-slate-200/80 sm:text-lg">
+        <p class="max-w-xl text-base text-neutral-200/80 sm:text-lg">
           Yuujou Events is a community-driven hub in Aklan dedicated to uniting fans through cosplay, creative
           expression, and shared passions. We host uplifting gatherings, fandom collaborations, and community
           spotlights where friendships can flourish. Discover upcoming meetups, learn how to get involved, and join a
           space that celebrates kindness, artistry, and connection.
         </p>
-        <div class="flex flex-wrap gap-3 text-sm font-medium text-slate-100">
+        <div class="flex flex-wrap gap-3 text-sm font-medium text-neutral-100">
           <a
             href="#guidelines"
-            class="rounded-full bg-sky-500/20 px-5 py-2 transition hover:bg-sky-400/30 hover:text-white"
+            class="w-full rounded-full bg-red-600/20 px-5 py-2 text-center transition hover:bg-red-500/40 hover:text-white sm:w-auto"
           >
             Read Community Guidelines
           </a>
           <a
             href="#events"
-            class="rounded-full border border-white/20 px-5 py-2 transition hover:border-sky-300/60 hover:text-sky-100"
+            class="w-full rounded-full border border-white/20 px-5 py-2 text-center transition hover:border-red-400/60 hover:text-red-200 sm:w-auto"
           >
             View Upcoming Highlights
           </a>
         </div>
       </div>
-      <div class="relative rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-2xl">
-        <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-800/60">
-          <div class="flex h-full w-full flex-col items-center justify-center gap-3 text-center text-slate-200/70">
-            <span class="rounded-full bg-slate-700/60 px-3 py-1 text-xs uppercase tracking-[0.3em]">Preview</span>
-            <p class="max-w-[18ch] text-lg font-medium text-slate-100">Placeholder image — submissions open soon!</p>
-            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Upload portal launches 08.25</p>
+      <div class="relative rounded-3xl border border-white/10 bg-neutral-950/70 p-6 shadow-2xl">
+        <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/60">
+          <div class="flex h-full w-full flex-col items-center justify-center gap-3 text-center text-neutral-200/70">
+            <span class="rounded-full bg-neutral-800/60 px-3 py-1 text-xs uppercase tracking-[0.3em]">Preview</span>
+            <p class="max-w-[18ch] text-lg font-medium text-neutral-100">Placeholder image — submissions open soon!</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-neutral-400">Upload portal launches 08.25</p>
           </div>
         </div>
-        <p class="mt-4 text-xs text-slate-300/80">
+        <p class="mt-4 text-xs text-neutral-300/80">
           Want to contribute? We will replace this placeholder with community photos once all permissions are cleared.
         </p>
       </div>
@@ -62,16 +62,16 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <section id="events" class="relative isolate bg-black/30 px-4 py-16 sm:px-6 sm:py-20">
-    <div class="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-slate-600/40 to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-neutral-600/40 to-transparent"></div>
     <div class="mx-auto flex max-w-6xl flex-col gap-12">
       <div class="max-w-3xl">
         <h2 class="text-2xl font-semibold text-white sm:text-3xl">Upcoming Highlights</h2>
-        <p class="mt-3 text-sm text-slate-200/80">
+        <p class="mt-3 text-sm text-neutral-200/80">
           Each gathering focuses on collaboration and friendship. Images below are temporary placeholders until our
           photographers finish curating the new gallery.
         </p>
       </div>
-      <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
         {[
           {
             title: 'Friendship Festival',
@@ -92,18 +92,18 @@ import Footer from '../components/Footer.astro';
             footer: 'Nighttime vibes — final shots arriving soon'
           }
         ].map((event, index) => (
-          <article class="flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70">
-            <div class="relative aspect-[4/3] w-full bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950">
+          <article class="flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-neutral-950/70">
+            <div class="relative aspect-[4/3] w-full bg-gradient-to-br from-neutral-800 via-neutral-900 to-black">
               <div class="absolute inset-0 grid place-items-center">
-                <div class="rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-center text-xs uppercase tracking-[0.4em] text-slate-300">
+                <div class="rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-center text-xs uppercase tracking-[0.4em] text-neutral-300">
                   Placeholder {index + 1}
                 </div>
               </div>
             </div>
             <div class="flex flex-1 flex-col gap-3 p-6">
               <h3 class="text-lg font-semibold text-white">{event.title}</h3>
-              <p class="text-sm text-slate-200/80">{event.description}</p>
-              <div class="mt-auto text-xs font-medium uppercase tracking-[0.3em] text-slate-400">
+              <p class="text-sm text-neutral-200/80">{event.description}</p>
+              <div class="mt-auto text-xs font-medium uppercase tracking-[0.3em] text-neutral-400">
                 {event.footer}
               </div>
             </div>
@@ -120,22 +120,25 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <section class="px-4 pb-20 sm:px-6 sm:pb-24">
-    <div class="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-slate-900/70 p-10 text-center shadow-xl">
+    <div class="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-neutral-950/70 p-10 text-center shadow-xl">
       <h2 class="text-2xl font-semibold text-white sm:text-3xl">Need a placeholder asset?</h2>
-      <p class="mt-4 text-sm text-slate-200/80">
+      <p class="mt-4 text-sm text-neutral-200/80">
         Yuujou Events is built around celebrating the creativity of our community. While we gather final photos and
         artworks, you can download our official placeholder pack for use in flyers, slides, or event posts. Once
         permissions and approvals are cleared, replace them with authentic visuals that highlight the heart of cosplay
         and fan collaboration.
       </p>
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-slate-100">
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-neutral-100">
         <a
           href="#"
-          class="rounded-full bg-sky-500/20 px-5 py-2 transition hover:bg-sky-400/30 hover:text-white"
+          class="w-full rounded-full bg-red-600/20 px-5 py-2 text-center transition hover:bg-red-500/40 hover:text-white sm:w-auto"
         >
           Download Placeholder Pack
         </a>
-        <a href="mailto:hello@yuujou.events" class="rounded-full border border-white/20 px-5 py-2 transition hover:border-sky-300/60 hover:text-sky-100">
+        <a
+          href="mailto:hello@yuujou.events"
+          class="w-full rounded-full border border-white/20 px-5 py-2 text-center transition hover:border-red-400/60 hover:text-red-200 sm:w-auto"
+        >
           Contact the Team
         </a>
       </div>
