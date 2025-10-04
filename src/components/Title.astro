@@ -4,10 +4,10 @@ const title = [
   { text: 'Events', accent: false }
 ];
 ---
-<h1 class="font-bold text-[clamp(2.5rem,6vw,4.5rem)] leading-tight tracking-tight">
+<h1 class="font-bold text-[clamp(2.5rem,6vw,4.5rem)] leading-tight tracking-tight text-center md:text-left">
   {title.map(({ text, accent }) => (
     <span
-      class={`block md:inline md:mr-3 ${
+      class={`block md:inline md:mr-3 md:last:mr-0 ${
         accent ? 'text-red-400 drop-shadow-[0_10px_30px_rgba(248,113,113,0.35)]' : 'text-white'
       }`}
     >
