@@ -1,19 +1,36 @@
 ---
+import Title from './Title.astro';
+import BloodSplatters from './BloodSplatters.astro';
 ---
-<section class="min-h-screen flex items-center justify-center bg-gradient-to-b from-death-black via-gray-900 to-blood-red">
-  <div class="text-center px-4 max-w-4xl">
-    <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-wider">
-      DEATH<span class="text-blood-red">BOOK</span>
-    </h1>
-    <p class="text-xl md:text-2xl mb-8 italic opacity-90">
-      The Most Dramatic Notebook in Cosplay History (Probably)
-    </p>
-    <p class="text-lg mb-12 max-w-2xl mx-auto">
-      Join our alternative culture community where we take spooky notebooks way too seriously
-      and debate supernatural detective work over coffee.
-    </p>
-    <button class="bg-blood-red hover:bg-red-900 text-white px-8 py-4 text-lg font-bold border-2 border-white transition-all">
-      WRITE YOUR NAME (Just Kidding)
-    </button>
+<section class="hero">
+  <BloodSplatters />
+  <div class="center">
+    <Title />
+    <p class="tag">a moody Astro hero with SVG blood splatter</p>
   </div>
 </section>
+
+<style>
+  .hero{
+    position:relative;
+    min-height:100svh;
+    overflow:hidden;
+  }
+  .center{
+    position:relative;
+    z-index:2;
+    display:grid;
+    place-items:center;
+    min-height:100svh;
+    text-align:center;
+    padding: clamp(1rem, 2vw, 3rem);
+  }
+  .tag{
+    margin-top: .75rem;
+    color:#c8c8c8;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-size: clamp(.7rem, 1.4vw, .9rem);
+    opacity:.7;
+  }
+</style>

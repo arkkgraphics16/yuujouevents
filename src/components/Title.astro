@@ -1,0 +1,29 @@
+---
+const text = "DEATH NOTE";
+const chars = text.split("");
+---
+<h1 class="title" aria-label={text}>
+  {chars.map((c, i) => <span style={`--i:${i}`}>{c}</span>)}
+</h1>
+
+<style>
+  .title{
+    position:relative;
+    z-index:1;
+    font-family:'Creepster', system-ui, sans-serif;
+    font-size: clamp(3rem, 9vw, 10rem);
+    letter-spacing:.06em;
+    color: var(--text);
+    text-shadow:
+      0 0 1px #fff,
+      0 0 12px rgba(255,255,255,.15);
+    user-select:none;
+  }
+  .title span{
+    display:inline-block;
+    transform:
+      translateY(calc((var(--i) % 2)*-4px))
+      rotate(calc((var(--i) - 5) * 1.5deg));
+    padding-inline: .02em;
+  }
+</style>
