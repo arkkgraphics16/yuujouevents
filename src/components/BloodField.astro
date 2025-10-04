@@ -1,0 +1,51 @@
+---
+const blobs = [
+  { left: 4, top: 6, size: 38, tx: '16px', ty: '-22px', rot: '9deg', delay: '-1.8s', duration: '7.5s', breathe: '6.4s', opacity: 0.68 },
+  { left: 12, top: 24, size: 44, tx: '-12px', ty: '18px', rot: '-6deg', delay: '-0.6s', duration: '9.4s', breathe: '7.8s', opacity: 0.55 },
+  { left: 22, top: 12, size: 26, tx: '9px', ty: '-14px', rot: '12deg', delay: '-2.1s', duration: '8.2s', breathe: '6.9s', opacity: 0.62 },
+  { left: 30, top: 30, size: 36, tx: '-18px', ty: '22px', rot: '-11deg', delay: '-1.3s', duration: '10.2s', breathe: '8.6s', opacity: 0.52 },
+  { left: 38, top: 18, size: 20, tx: '12px', ty: '-12px', rot: '7deg', delay: '-3.2s', duration: '7.1s', breathe: '6.2s', opacity: 0.58 },
+  { left: 46, top: 8, size: 32, tx: '-16px', ty: '16px', rot: '-8deg', delay: '-0.9s', duration: '11.4s', breathe: '9.1s', opacity: 0.47 },
+  { left: 58, top: 12, size: 28, tx: '15px', ty: '-20px', rot: '10deg', delay: '-2.8s', duration: '8.8s', breathe: '6.7s', opacity: 0.61 },
+  { left: 66, top: 20, size: 18, tx: '-10px', ty: '14px', rot: '-5deg', delay: '-1.6s', duration: '7.9s', breathe: '7.2s', opacity: 0.5 },
+  { left: 74, top: 10, size: 34, tx: '14px', ty: '-16px', rot: '6deg', delay: '-2.3s', duration: '9.7s', breathe: '8.1s', opacity: 0.57 },
+  { left: 82, top: 22, size: 22, tx: '-11px', ty: '18px', rot: '-9deg', delay: '-1.1s', duration: '8.5s', breathe: '6.9s', opacity: 0.53 },
+  { left: 88, top: 8, size: 30, tx: '18px', ty: '-18px', rot: '13deg', delay: '-2.9s', duration: '10.8s', breathe: '9.4s', opacity: 0.49 },
+  { left: 6, top: 40, size: 28, tx: '-14px', ty: '20px', rot: '-12deg', delay: '-0.5s', duration: '9.2s', breathe: '7.5s', opacity: 0.6 },
+  { left: 16, top: 48, size: 18, tx: '10px', ty: '-10px', rot: '5deg', delay: '-2.7s', duration: '7.3s', breathe: '6.1s', opacity: 0.64 },
+  { left: 28, top: 54, size: 42, tx: '-20px', ty: '24px', rot: '-14deg', delay: '-1.4s', duration: '11.1s', breathe: '8.8s', opacity: 0.51 },
+  { left: 36, top: 46, size: 24, tx: '13px', ty: '-16px', rot: '8deg', delay: '-3.1s', duration: '8.4s', breathe: '6.6s', opacity: 0.59 },
+  { left: 46, top: 38, size: 16, tx: '-9px', ty: '12px', rot: '-7deg', delay: '-0.7s', duration: '6.8s', breathe: '5.9s', opacity: 0.67 },
+  { left: 56, top: 44, size: 48, tx: '20px', ty: '-24px', rot: '11deg', delay: '-2.6s', duration: '12s', breathe: '9.7s', opacity: 0.48 },
+  { left: 66, top: 36, size: 26, tx: '-15px', ty: '16px', rot: '-10deg', delay: '-1.9s', duration: '9.6s', breathe: '7.9s', opacity: 0.56 },
+  { left: 74, top: 44, size: 20, tx: '12px', ty: '-14px', rot: '6deg', delay: '-0.8s', duration: '7.6s', breathe: '6.4s', opacity: 0.6 },
+  { left: 84, top: 38, size: 14, tx: '-8px', ty: '10px', rot: '-4deg', delay: '-2.4s', duration: '6.4s', breathe: '5.6s', opacity: 0.63 },
+  { left: 92, top: 32, size: 24, tx: '15px', ty: '-18px', rot: '9deg', delay: '-1.2s', duration: '8.9s', breathe: '7.1s', opacity: 0.54 },
+  { left: 8, top: 62, size: 34, tx: '-16px', ty: '22px', rot: '-13deg', delay: '-0.4s', duration: '10.4s', breathe: '8.3s', opacity: 0.52 },
+  { left: 18, top: 70, size: 22, tx: '11px', ty: '-12px', rot: '7deg', delay: '-2.5s', duration: '7.8s', breathe: '6.5s', opacity: 0.58 },
+  { left: 28, top: 66, size: 16, tx: '-9px', ty: '14px', rot: '-6deg', delay: '-1.7s', duration: '6.9s', breathe: '6.1s', opacity: 0.65 },
+  { left: 38, top: 72, size: 40, tx: '18px', ty: '-20px', rot: '10deg', delay: '-3s', duration: '11.6s', breathe: '9s', opacity: 0.5 },
+  { left: 48, top: 60, size: 18, tx: '-11px', ty: '16px', rot: '-8deg', delay: '-0.6s', duration: '7.4s', breathe: '6.2s', opacity: 0.62 },
+  { left: 58, top: 68, size: 24, tx: '14px', ty: '-16px', rot: '9deg', delay: '-2.2s', duration: '8.7s', breathe: '7.3s', opacity: 0.57 },
+  { left: 68, top: 74, size: 18, tx: '-10px', ty: '13px', rot: '-5deg', delay: '-1s', duration: '7.1s', breathe: '6s', opacity: 0.64 },
+  { left: 78, top: 66, size: 32, tx: '17px', ty: '-18px', rot: '12deg', delay: '-2.7s', duration: '9.8s', breathe: '8.2s', opacity: 0.55 },
+  { left: 88, top: 72, size: 20, tx: '-12px', ty: '14px', rot: '-7deg', delay: '-1.5s', duration: '7.7s', breathe: '6.4s', opacity: 0.6 },
+  { left: 10, top: 84, size: 28, tx: '15px', ty: '-17px', rot: '8deg', delay: '-2s', duration: '8.9s', breathe: '7.4s', opacity: 0.53 },
+  { left: 24, top: 86, size: 18, tx: '-9px', ty: '12px', rot: '-6deg', delay: '-0.3s', duration: '6.7s', breathe: '5.8s', opacity: 0.66 },
+  { left: 40, top: 82, size: 44, tx: '19px', ty: '-21px', rot: '11deg', delay: '-2.6s', duration: '12.2s', breathe: '9.5s', opacity: 0.49 },
+  { left: 56, top: 84, size: 22, tx: '-13px', ty: '15px', rot: '-9deg', delay: '-1.8s', duration: '7.9s', breathe: '6.6s', opacity: 0.58 },
+  { left: 70, top: 88, size: 16, tx: '9px', ty: '-11px', rot: '5deg', delay: '-2.1s', duration: '6.5s', breathe: '5.7s', opacity: 0.63 },
+  { left: 84, top: 84, size: 30, tx: '-16px', ty: '18px', rot: '-10deg', delay: '-0.9s', duration: '9.3s', breathe: '7.8s', opacity: 0.54 }
+];
+---
+<div class="pointer-events-none absolute inset-0">
+  {blobs.map((blob, index) => {
+    const color = index % 2 === 0 ? '#d10212' : '#8a0007';
+    return (
+      <div
+        class="absolute rounded-full bg-[var(--blood)] opacity-[var(--op)] blur-[0.5px] animate-float-slow animate-breathe"
+        style={`left:${blob.left}%;top:${blob.top}%;width:${blob.size}px;height:${blob.size}px;--tx:${blob.tx};--ty:${blob.ty};--rot:${blob.rot};--delay:${blob.delay};--dur:${blob.duration};--breath-dur:${blob.breathe};--op:${blob.opacity};--blood:${color};`}
+      ></div>
+    );
+  })}
+</div>
