@@ -1,11 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Rules from '../components/Rules.astro';
-import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import BloodField from '../components/BloodField.astro';
+import Title from '../components/Title.astro';
 ---
-<Layout title="DeathBook Parody - Alt Culture Cosplay">
-  <Hero />
-  <Rules />
-  <Footer />
-</Layout>
+<head>
+  <title>DEATHNOTE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<main class="relative h-[100dvh] w-screen overflow-hidden">
+  <BloodField />
+  <section class="relative z-10 grid h-full place-items-center px-6 text-center">
+    <div>
+      <Title />
+      <p class="mt-2 text-xs uppercase tracking-[0.2em] text-neutral-300">
+        floating blood blobs — no big smear
+      </p>
+    </div>
+  </section>
+</main>

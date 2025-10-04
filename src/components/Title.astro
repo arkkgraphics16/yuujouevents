@@ -1,29 +1,23 @@
 ---
-const text = "DEATH NOTE";
-const chars = text.split("");
+const letters = [
+  { char: 'D', rotate: '-2deg', x: '0px', y: '0px' },
+  { char: 'E', rotate: '3deg', x: '2px', y: '-2px' },
+  { char: 'A', rotate: '-4deg', x: '-1px', y: '1px' },
+  { char: 'T', rotate: '2deg', x: '1px', y: '-3px' },
+  { char: 'H', rotate: '-3deg', x: '-2px', y: '2px' },
+  { char: 'N', rotate: '4deg', x: '1px', y: '-1px' },
+  { char: 'O', rotate: '-5deg', x: '-2px', y: '0px' },
+  { char: 'T', rotate: '3deg', x: '2px', y: '-2px' },
+  { char: 'E', rotate: '-1deg', x: '0px', y: '1px' }
+];
 ---
-<h1 class="title" aria-label={text}>
-  {chars.map((c, i) => <span style={`--i:${i}`}>{c}</span>)}
+<h1 class="font-[Creepster] text-[clamp(3rem,9vw,8rem)] tracking-[0.25em] uppercase drop-shadow-[0_0_18px_rgba(209,2,18,0.35)]">
+  {letters.map(({ char, rotate, x, y }) => (
+    <span
+      class="inline-block origin-center px-[0.06em]"
+      style={`transform: translate(${x}, ${y}) rotate(${rotate});`}
+    >
+      {char}
+    </span>
+  ))}
 </h1>
-
-<style>
-  .title{
-    position:relative;
-    z-index:1;
-    font-family:'Creepster', system-ui, sans-serif;
-    font-size: clamp(3rem, 9vw, 10rem);
-    letter-spacing:.06em;
-    color: var(--text);
-    text-shadow:
-      0 0 1px #fff,
-      0 0 12px rgba(255,255,255,.15);
-    user-select:none;
-  }
-  .title span{
-    display:inline-block;
-    transform:
-      translateY(calc((var(--i) % 2)*-4px))
-      rotate(calc((var(--i) - 5) * 1.5deg));
-    padding-inline: .02em;
-  }
-</style>
