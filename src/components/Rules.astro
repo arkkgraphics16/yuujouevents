@@ -1,23 +1,46 @@
 ---
+const guidelines = [
+  {
+    title: 'Celebrate friendships',
+    description:
+      'Share stories, photos, and projects that highlight kindness, collaboration, and positive community vibes.'
+  },
+  {
+    title: 'Keep spaces welcoming',
+    description:
+      'Use inclusive language, respect boundaries, and remember that first-time attendees might be nervous.'
+  },
+  {
+    title: 'Ask before you post',
+    description:
+      'Always get permission before uploading images or quoting someone. Placeholder images are here until approvals arrive.'
+  },
+  {
+    title: 'Support creative work',
+    description:
+      'Credit artists and cosplayers, link to portfolios, and uplift one another with constructive feedback.'
+  }
+];
 ---
-<section class="py-20 px-4 bg-death-black">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-4xl font-bold mb-12 text-center border-b-2 border-blood-red pb-4">
-      COMMUNITY RULES (Very Official)
-    </h2>
-    <div class="space-y-6 text-lg">
-      <div class="border-l-4 border-blood-red pl-6 py-2">
-        <p>Rule 1: The cosplayer whose photo appears in this gallery becomes infinitely cooler.</p>
-      </div>
-      <div class="border-l-4 border-blood-red pl-6 py-2">
-        <p>Rule 2: Dramatic potato chip eating is encouraged at all meetups.</p>
-      </div>
-      <div class="border-l-4 border-blood-red pl-6 py-2">
-        <p>Rule 3: All moral debates must be accompanied by excessive monologuing.</p>
-      </div>
-      <div class="border-l-4 border-blood-red pl-6 py-2">
-        <p>Rule 4: Tennis matches solve everything. So does cake.</p>
-      </div>
+<section class="relative isolate overflow-hidden rounded-3xl bg-slate-900/70 px-6 py-16 shadow-xl ring-1 ring-white/10">
+  <div class="mx-auto flex max-w-4xl flex-col gap-10 text-left">
+    <div>
+      <h2 class="text-3xl font-semibold text-sky-200 sm:text-4xl">Community Guidelines</h2>
+      <p class="mt-3 text-base text-slate-200/80">
+        Yuujou Events thrives when everyone feels seen and safe. Please review the guidelines below before joining
+        a gathering or posting in the community hub.
+      </p>
     </div>
+    <dl class="space-y-6">
+      {guidelines.map((item) => (
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6 transition hover:border-sky-300/40">
+          <dt class="text-lg font-semibold text-white">{item.title}</dt>
+          <dd class="mt-2 text-sm text-slate-200/80">{item.description}</dd>
+        </div>
+      ))}
+    </dl>
   </div>
+  <div
+    class="pointer-events-none absolute -right-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-sky-500/20 blur-3xl"
+  ></div>
 </section>
