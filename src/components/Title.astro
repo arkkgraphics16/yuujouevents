@@ -1,23 +1,17 @@
 ---
-const letters = [
-  { char: 'D', rotate: '-2deg', x: '0px', y: '0px' },
-  { char: 'E', rotate: '3deg', x: '2px', y: '-2px' },
-  { char: 'A', rotate: '-4deg', x: '-1px', y: '1px' },
-  { char: 'T', rotate: '2deg', x: '1px', y: '-3px' },
-  { char: 'H', rotate: '-3deg', x: '-2px', y: '2px' },
-  { char: 'N', rotate: '4deg', x: '1px', y: '-1px' },
-  { char: 'O', rotate: '-5deg', x: '-2px', y: '0px' },
-  { char: 'T', rotate: '3deg', x: '2px', y: '-2px' },
-  { char: 'E', rotate: '-1deg', x: '0px', y: '1px' }
+const title = [
+  { text: 'Yuujou', accent: true },
+  { text: 'Events', accent: false }
 ];
 ---
-<h1 class="font-[Creepster] text-[clamp(3rem,9vw,8rem)] tracking-[0.25em] uppercase drop-shadow-[0_0_18px_rgba(209,2,18,0.35)]">
-  {letters.map(({ char, rotate, x, y }) => (
+<h1 class="font-bold text-[clamp(2.5rem,6vw,4.5rem)] leading-tight tracking-tight">
+  {title.map(({ text, accent }) => (
     <span
-      class="inline-block origin-center px-[0.06em]"
-      style={`transform: translate(${x}, ${y}) rotate(${rotate});`}
+      class={`block md:inline md:mr-3 ${
+        accent ? 'text-sky-300 drop-shadow-[0_10px_30px_rgba(56,189,248,0.35)]' : 'text-white'
+      }`}
     >
-      {char}
+      {text}
     </span>
   ))}
 </h1>
