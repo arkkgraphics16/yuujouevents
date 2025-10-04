@@ -17,3 +17,9 @@ body {
 a {
   color: inherit;
 }
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
